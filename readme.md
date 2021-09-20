@@ -1,1 +1,1 @@
-#xmonad-config
+xmonad-config
