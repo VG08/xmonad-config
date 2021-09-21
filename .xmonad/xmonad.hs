@@ -104,8 +104,8 @@ myStartupHook = do
     spawnOnce "nm-applet &"
     spawnOnce "volumeicon &"
     spawnOnce "conky -c $HOME/.config/conky/doomone-xmonad.conkyrc"
-    spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 0 --transparent true --alpha 0 --tint 0x282c34  --height 22 &"
-    spawnOnce "/usr/bin/emacs --daemon &" -- emacs daemon for the emacsclient
+    spawnOnce "trayer --edge top --align right --widthtype request --padding 8 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --iconspacing 2 --alpha 0 --tint 0x282c34  --height 22 &"
+    
     -- uncomment to restore last saved wallpaper
     --spawnOnce "xargs xwallpaper --stretch < ~/.xwallpaper"
     --uncomment to set a random wallpaper on login
@@ -116,6 +116,7 @@ myStartupHook = do
     spawnOnce "nitrogen --restore &"   -- if you prefer nitrogen to feh
     spawnOnce "sudo brightnessctl --device='asus::kbd_backlight' set 1"
     spawnOnce "sudo brightnessctl --device='asus::kbd_backlight' set 0"
+    spawnOnce "xrandr --output HDMI-1-0 --mode 1920x1080 --above eDP-1"
 
 
 myColorizer :: Window -> Bool -> X (String, String)
